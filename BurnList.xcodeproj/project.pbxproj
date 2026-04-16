@@ -38,6 +38,7 @@
 		BBC50F1DF0683C90B8923A43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C0325C99012639E0BBEFF9 /* Foundation.framework */; };
 		D68CE17DAE182D4FA9BAE8FE /* ChecklistStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540C071AC59A961AE132523E /* ChecklistStore.swift */; };
 		FB378A5C6215A36A4BC4B4DE /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11444AB352FCD1080A2EEF75 /* DateFormatting.swift */; };
+		BB00CC11DD22EE33FF445566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA00BB11CC22DD33EE44FF55 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		F792C88A6F09BDA0B568E849 /* ToggleTaskIntent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ToggleTaskIntent.swift; sourceTree = "<group>"; };
 		FCDCEAAB16DC00CE0CA6C6F1 /* TaskSheetParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskSheetParser.swift; path = Sync/TaskSheetParser.swift; sourceTree = "<group>"; };
 		FF66EE55DD44CC33BB22AA11 /* CyberpunkTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyberpunkTheme.swift; path = Support/CyberpunkTheme.swift; sourceTree = "<group>"; };
+		AA00BB11CC22DD33EE44FF55 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 				48951E57D74BAC40AC5A1342 /* SettingsView.swift */,
 				307193931729586FC9E565BA /* Info.plist */,
 				2557BFF2EBD2D97EC6A722EF /* BurnList.entitlements */,
+				AA00BB11CC22DD33EE44FF55 /* Assets.xcassets */,
 			);
 			path = BurnList;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB00CC11DD22EE33FF445566 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,7 +555,7 @@
 		A88791EC967547161A1025E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
@@ -578,7 +582,7 @@
 		F52D236C176F1E9FCE43B6EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
