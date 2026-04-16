@@ -6,16 +6,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 # Build the app
-xcodebuild -project DailyToDoCheckList.xcodeproj -scheme DailyToDoCheckList -configuration Debug build
+xcodebuild -project BurnList.xcodeproj -scheme BurnList -configuration Debug build
 
 # Run all tests
-xcodebuild -project DailyToDoCheckList.xcodeproj -scheme DailyToDoCheckList -destination 'platform=iOS Simulator,name=iPhone 16' test
+xcodebuild -project BurnList.xcodeproj -scheme BurnList -destination 'platform=iOS Simulator,name=iPhone 16' test
 
 # Run a single test class
-xcodebuild -project DailyToDoCheckList.xcodeproj -scheme DailyToDoCheckList -destination 'platform=iOS Simulator,name=iPhone 16' -only-testing:DailyToDoCheckListTests/ChecklistStoreTests test
+xcodebuild -project BurnList.xcodeproj -scheme BurnList -destination 'platform=iOS Simulator,name=iPhone 16' -only-testing:BurnListTests/ChecklistStoreTests test
 
 # Run a single test method
-xcodebuild -project DailyToDoCheckList.xcodeproj -scheme DailyToDoCheckList -destination 'platform=iOS Simulator,name=iPhone 16' -only-testing:DailyToDoCheckListTests/ChecklistStoreTests/testTogglePersistsCompletion test
+xcodebuild -project BurnList.xcodeproj -scheme BurnList -destination 'platform=iOS Simulator,name=iPhone 16' -only-testing:BurnListTests/ChecklistStoreTests/testTogglePersistsCompletion test
 ```
 
 ## Architecture
@@ -32,13 +32,13 @@ Google Sheet (CSV) → TaskSyncService → TaskSheetParser → ChecklistStore (U
 
 - **Shared/** — Code shared between the main app and widget extension
   - `DailyTask` — Core model. Tasks are keyed by compound ID `dateID|taskID` (date-isolated completion state)
-  - `ChecklistStore` — Persistence via app group UserDefaults (`group.com.example.DailyToDoCheckList.shared`), enabling widget data sharing
+  - `ChecklistStore` — Persistence via app group UserDefaults (`group.com.example.BurnList.shared`), enabling widget data sharing
   - `TaskSheetParser` — Parses Google Sheets CSV, dynamically identifies date and task columns, handles multiple date formats
   - `AppConstants` — App group identifier, UserDefaults keys, widget kind
-- **DailyToDoCheckList/App/** — `AppModel` is the central `@Observable`/`@MainActor` view model coordinating sync, persistence, and reminders
-- **DailyToDoCheckList/Views/** — `ChecklistHomeView` (main list with pull-to-refresh) and `SettingsView` (sheet URL config, reminder settings)
-- **DailyToDoCheckList/Sync/** — `TaskSyncService` handles network fetch with graceful cache fallback on failure
-- **DailyToDoCheckListWidget/** — Home screen widget with `ToggleTaskIntent` for interactive task toggling; refreshes daily at 00:05
+- **BurnList/App/** — `AppModel` is the central `@Observable`/`@MainActor` view model coordinating sync, persistence, and reminders
+- **BurnList/Views/** — `ChecklistHomeView` (main list with pull-to-refresh) and `SettingsView` (sheet URL config, reminder settings)
+- **BurnList/Sync/** — `TaskSyncService` handles network fetch with graceful cache fallback on failure
+- **BurnListWidget/** — Home screen widget with `ToggleTaskIntent` for interactive task toggling; refreshes daily at 00:05
 
 ### Design Decisions
 

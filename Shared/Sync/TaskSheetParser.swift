@@ -1,6 +1,47 @@
 import Foundation
 
 struct TaskSheetParser {
+    func parseAllTasks(from csv: String) throws -> [String: [DailyTask]] {
+        let rows = parseRows(from: csv)
+        guard let header = rows.first, !header.isEmpty else {
+            throw TaskSheetParserError.missingHeader
+        }
+
+        guard let dateColumnIndex = header.firstIndex(where: { $0.trimmingCharacters(in: .whitespacesAndNewlines).caseInsensitiveCompare("Date") == .orderedSame }) else {
+            throw TaskSheetParserError.missingDateColumn
+        }
+
+        let taskColumns = taskColumnDefinitions(from: header, excluding: dateColumnIndex)
+        var result: [String: [DailyTask]] = [:]
+
+        for row in rows.dropFirst() {
+            guard row.indices.contains(dateColumnIndex),
+                  let dateID = DateFormatting.normalizedDayID(fromSheetValue: row[dateColumnIndex]) else {
+                continue
+            }
+
+            let tasks = taskColumns.compactMap { column -> DailyTask? in
+                let value = row.indices.contains(column.rawIndex) ? row[column.rawIndex] : ""
+                guard !value.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+                    return nil
+                }
+                return DailyTask(
+                    dateID: dateID,
+                    taskID: slug(from: column.title),
+                    title: column.title,
+                    sortOrder: column.sortOrder,
+                    isCompleted: false
+                )
+            }
+
+            if !tasks.isEmpty {
+                result[dateID] = tasks
+            }
+        }
+
+        return result
+    }
+
     func parseTodayTasks(from csv: String, now: Date) throws -> [DailyTask] {
         let rows = parseRows(from: csv)
         guard let header = rows.first, !header.isEmpty else {

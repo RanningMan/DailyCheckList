@@ -39,7 +39,7 @@ struct TaskSyncService {
 
     func refresh(configuration: AppConfiguration, now: Date = .now) async throws -> DailyChecklistSnapshot {
         let trimmedURL = configuration.sheetURLString.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard let url = URL(string: trimmedURL), !trimmedURL.isEmpty else {
+        guard !trimmedURL.isEmpty, let url = URL(string: Self.csvExportURL(from: trimmedURL)) else {
             throw TaskSyncServiceError.invalidSourceURL
         }
 
@@ -49,6 +49,9 @@ struct TaskSyncService {
         }
 
         let csv = String(decoding: data, as: UTF8.self)
+        if let allTasks = try? parser.parseAllTasks(from: csv) {
+            store.mergeHistory(allTasks)
+        }
         let tasks = try parser.parseTodayTasks(from: csv, now: now)
         let snapshot = DailyChecklistSnapshot(
             dateID: DateFormatting.dayID(from: now),
@@ -75,5 +78,42 @@ struct TaskSyncService {
             store.saveSnapshot(snapshot)
             return snapshot
         }
+    }
+
+    static func csvExportURL(from urlString: String) -> String {
+        // Already a CSV export URL
+        if urlString.contains("/export") && urlString.contains("format=csv") {
+            return urlString
+        }
+
+        // Already has /pub?output=csv (older publish format)
+        if urlString.contains("/pub") && urlString.contains("output=csv") {
+            return urlString
+        }
+
+        // Extract spreadsheet ID from common Google Sheets URL patterns:
+        // https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit...
+        // https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/...
+        guard let url = URL(string: urlString),
+              let host = url.host,
+              host.contains("google.com"),
+              let dRange = url.pathComponents.firstIndex(of: "d"),
+              dRange + 1 < url.pathComponents.count else {
+            return urlString
+        }
+
+        let spreadsheetID = url.pathComponents[dRange + 1]
+        var exportURL = "https://docs.google.com/spreadsheets/d/\(spreadsheetID)/export?format=csv"
+
+        // Preserve gid parameter if present in the original URL
+        if let fragment = url.fragment, fragment.hasPrefix("gid=") {
+            let gid = fragment.dropFirst(4)
+            exportURL += "&gid=\(gid)"
+        } else if let components = URLComponents(string: urlString),
+                  let gid = components.queryItems?.first(where: { $0.name == "gid" })?.value {
+            exportURL += "&gid=\(gid)"
+        }
+
+        return exportURL
     }
 }

@@ -3,20 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		05426E33A07FD0D379E12EFE /* DailyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284705BB58F32D6E3F65FCBB /* DailyTask.swift */; };
-		09AB84495018F40B16788BB7 /* DailyToDoCheckListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D897AC57CE362D128DA763 /* DailyToDoCheckListApp.swift */; };
+		09AB84495018F40B16788BB7 /* BurnListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D897AC57CE362D128DA763 /* BurnListApp.swift */; };
 		0DC5BC78204A305C74D91B7F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F121005950FF4BB6618252 /* AppConstants.swift */; };
-		13EACB06F2F5329B01AAAB64 /* DailyToDoCheckListWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E710B2BDB94877682C96971 /* DailyToDoCheckListWidget.swift */; };
+		13EACB06F2F5329B01AAAB64 /* BurnListWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E710B2BDB94877682C96971 /* BurnListWidget.swift */; };
 		1E39E008AB39792E7463B80F /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8A33534394F0E7C012F6E6 /* AppConfiguration.swift */; };
 		29767FA241E8D9481C3FB061 /* DailyChecklistSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D466FABCE8EAE407BD521E9 /* DailyChecklistSnapshot.swift */; };
 		3AC2A76BB7EAD77ACA2347A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C0325C99012639E0BBEFF9 /* Foundation.framework */; };
 		4563083663BA0423763E630E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48951E57D74BAC40AC5A1342 /* SettingsView.swift */; };
 		4792FEABD863F0B6F2CB2C83 /* TaskSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA18C3AD5F17FBADC55FF51 /* TaskSyncService.swift */; };
-		480320B5F11D59FB98C85E8E /* DailyToDoCheckListWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C274F1E015E7D882CAB5071A /* DailyToDoCheckListWidget.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		480320B5F11D59FB98C85E8E /* BurnListWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C274F1E015E7D882CAB5071A /* BurnListWidget.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4EEF1C2E286794F3DF8B5913 /* ChecklistHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D47A268BD0AECE379209EC /* ChecklistHomeView.swift */; };
 		4F1760111B3CE3B6E8EB45FF /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11444AB352FCD1080A2EEF75 /* DateFormatting.swift */; };
 		504C48BA75F9D19E1000DBDC /* ChecklistStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C4295C8D46904E2C15E0E /* ChecklistStoreTests.swift */; };
@@ -31,7 +31,10 @@
 		932E15A1095C8552CBB5BE69 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F121005950FF4BB6618252 /* AppConstants.swift */; };
 		959DB06B235553A20FB22E2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C0325C99012639E0BBEFF9 /* Foundation.framework */; };
 		9C21F59E9735533FAC13FAF6 /* ToggleTaskIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F792C88A6F09BDA0B568E849 /* ToggleTaskIntent.swift */; };
+		AA11BB22CC33DD44EE55FF66 /* CyberpunkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66EE55DD44CC33BB22AA11 /* CyberpunkTheme.swift */; };
+		AA11BB22CC33DD44EE55FF67 /* CyberpunkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66EE55DD44CC33BB22AA11 /* CyberpunkTheme.swift */; };
 		B221D24681B75D5BAEC7FEF6 /* DailyChecklistSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D466FABCE8EAE407BD521E9 /* DailyChecklistSnapshot.swift */; };
+		BB11CC22DD33EE44FF556677 /* BurnEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44FF5566778899AABB0011 /* BurnEffect.swift */; };
 		BBC50F1DF0683C90B8923A43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C0325C99012639E0BBEFF9 /* Foundation.framework */; };
 		D68CE17DAE182D4FA9BAE8FE /* ChecklistStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540C071AC59A961AE132523E /* ChecklistStore.swift */; };
 		FB378A5C6215A36A4BC4B4DE /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11444AB352FCD1080A2EEF75 /* DateFormatting.swift */; };
@@ -43,27 +46,27 @@
 			containerPortal = 631C8D79AF247D88E1C89947 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E7FD8491E59F3C539B0B316C;
-			remoteInfo = DailyToDoCheckList;
+			remoteInfo = BurnList;
 		};
 		EEF212AB97526E755EB4D5D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 631C8D79AF247D88E1C89947 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 98FFBA6D676897096D141321;
-			remoteInfo = DailyToDoCheckListWidget;
+			remoteInfo = BurnListWidget;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4CFD3ADD6253244E8D41F765 /* Embed App Extensions */ = {
+		4CFD3ADD6253244E8D41F765 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				480320B5F11D59FB98C85E8E /* DailyToDoCheckListWidget.appex in Embed App Extensions */,
+				480320B5F11D59FB98C85E8E /* BurnListWidget.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -72,28 +75,30 @@
 		00E8280F09CA01E669F23953 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FA46A078300E50D30F352C4 /* TaskSheetParserTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TaskSheetParserTests.swift; sourceTree = "<group>"; };
 		11444AB352FCD1080A2EEF75 /* DateFormatting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFormatting.swift; path = Support/DateFormatting.swift; sourceTree = "<group>"; };
-		2557BFF2EBD2D97EC6A722EF /* DailyToDoCheckList.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; name = DailyToDoCheckList.entitlements; path = Resources/DailyToDoCheckList.entitlements; sourceTree = "<group>"; };
+		2557BFF2EBD2D97EC6A722EF /* BurnList.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; name = BurnList.entitlements; path = Resources/BurnList.entitlements; sourceTree = "<group>"; };
 		284705BB58F32D6E3F65FCBB /* DailyTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DailyTask.swift; path = Models/DailyTask.swift; sourceTree = "<group>"; };
-		2ADB495232BB113AAD307968 /* DailyToDoCheckListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyToDoCheckListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ADB495232BB113AAD307968 /* BurnListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BurnListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		307193931729586FC9E565BA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		39D47A268BD0AECE379209EC /* ChecklistHomeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChecklistHomeView.swift; path = Views/ChecklistHomeView.swift; sourceTree = "<group>"; };
 		48951E57D74BAC40AC5A1342 /* SettingsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Views/SettingsView.swift; sourceTree = "<group>"; };
 		5239613DB533172EF9D0F198 /* AppModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppModel.swift; path = App/AppModel.swift; sourceTree = "<group>"; };
 		540C071AC59A961AE132523E /* ChecklistStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChecklistStore.swift; path = Persistence/ChecklistStore.swift; sourceTree = "<group>"; };
-		5E710B2BDB94877682C96971 /* DailyToDoCheckListWidget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DailyToDoCheckListWidget.swift; sourceTree = "<group>"; };
+		5E710B2BDB94877682C96971 /* BurnListWidget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BurnListWidget.swift; sourceTree = "<group>"; };
 		6D466FABCE8EAE407BD521E9 /* DailyChecklistSnapshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DailyChecklistSnapshot.swift; path = Models/DailyChecklistSnapshot.swift; sourceTree = "<group>"; };
 		7AA18C3AD5F17FBADC55FF51 /* TaskSyncService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskSyncService.swift; path = Sync/TaskSyncService.swift; sourceTree = "<group>"; };
-		92D897AC57CE362D128DA763 /* DailyToDoCheckListApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DailyToDoCheckListApp.swift; path = App/DailyToDoCheckListApp.swift; sourceTree = "<group>"; };
+		92D897AC57CE362D128DA763 /* BurnListApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BurnListApp.swift; path = App/BurnListApp.swift; sourceTree = "<group>"; };
 		AC8A33534394F0E7C012F6E6 /* AppConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppConfiguration.swift; path = Models/AppConfiguration.swift; sourceTree = "<group>"; };
 		B2718F84EB4FF75F8710CA2C /* ReminderScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReminderScheduler.swift; path = Notifications/ReminderScheduler.swift; sourceTree = "<group>"; };
-		B692E1FC2119A11E63478D3E /* DailyToDoCheckListWidget.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = DailyToDoCheckListWidget.entitlements; sourceTree = "<group>"; };
+		B692E1FC2119A11E63478D3E /* BurnListWidget.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = BurnListWidget.entitlements; sourceTree = "<group>"; };
 		B8C0325C99012639E0BBEFF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		C274F1E015E7D882CAB5071A /* DailyToDoCheckListWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DailyToDoCheckListWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C274F1E015E7D882CAB5071A /* BurnListWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BurnListWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F121005950FF4BB6618252 /* AppConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppConstants.swift; path = Support/AppConstants.swift; sourceTree = "<group>"; };
 		C74C4295C8D46904E2C15E0E /* ChecklistStoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChecklistStoreTests.swift; sourceTree = "<group>"; };
-		E8597BDEB44B218259007F49 /* DailyToDoCheckList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyToDoCheckList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8597BDEB44B218259007F49 /* BurnList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurnList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE44FF5566778899AABB0011 /* BurnEffect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BurnEffect.swift; path = Views/BurnEffect.swift; sourceTree = "<group>"; };
 		F792C88A6F09BDA0B568E849 /* ToggleTaskIntent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ToggleTaskIntent.swift; sourceTree = "<group>"; };
 		FCDCEAAB16DC00CE0CA6C6F1 /* TaskSheetParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskSheetParser.swift; path = Sync/TaskSheetParser.swift; sourceTree = "<group>"; };
+		FF66EE55DD44CC33BB22AA11 /* CyberpunkTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyberpunkTheme.swift; path = Support/CyberpunkTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,9 +150,9 @@
 			children = (
 				CC7562BC50C425F8F41D2AEC /* Products */,
 				20C4ECDAF1F34094099582FD /* Frameworks */,
-				63A52AD34AE73E52FF1FAF06 /* DailyToDoCheckList */,
-				A87AE5BCC520527339595752 /* DailyToDoCheckListWidget */,
-				F4206ACF856AB5088FCF0DCB /* DailyToDoCheckListTests */,
+				63A52AD34AE73E52FF1FAF06 /* BurnList */,
+				A87AE5BCC520527339595752 /* BurnListWidget */,
+				F4206ACF856AB5088FCF0DCB /* BurnListTests */,
 				5BB67A0680B01FAF9F21D938 /* Shared */,
 			);
 			sourceTree = "<group>";
@@ -160,67 +165,65 @@
 				AC8A33534394F0E7C012F6E6 /* AppConfiguration.swift */,
 				540C071AC59A961AE132523E /* ChecklistStore.swift */,
 				C3F121005950FF4BB6618252 /* AppConstants.swift */,
+				FF66EE55DD44CC33BB22AA11 /* CyberpunkTheme.swift */,
 				11444AB352FCD1080A2EEF75 /* DateFormatting.swift */,
 				FCDCEAAB16DC00CE0CA6C6F1 /* TaskSheetParser.swift */,
 			);
-			name = Shared;
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		63A52AD34AE73E52FF1FAF06 /* DailyToDoCheckList */ = {
+		63A52AD34AE73E52FF1FAF06 /* BurnList */ = {
 			isa = PBXGroup;
 			children = (
-				92D897AC57CE362D128DA763 /* DailyToDoCheckListApp.swift */,
+				92D897AC57CE362D128DA763 /* BurnListApp.swift */,
 				5239613DB533172EF9D0F198 /* AppModel.swift */,
 				B2718F84EB4FF75F8710CA2C /* ReminderScheduler.swift */,
 				7AA18C3AD5F17FBADC55FF51 /* TaskSyncService.swift */,
 				39D47A268BD0AECE379209EC /* ChecklistHomeView.swift */,
+				EE44FF5566778899AABB0011 /* BurnEffect.swift */,
 				48951E57D74BAC40AC5A1342 /* SettingsView.swift */,
 				307193931729586FC9E565BA /* Info.plist */,
-				2557BFF2EBD2D97EC6A722EF /* DailyToDoCheckList.entitlements */,
+				2557BFF2EBD2D97EC6A722EF /* BurnList.entitlements */,
 			);
-			name = DailyToDoCheckList;
-			path = DailyToDoCheckList;
+			path = BurnList;
 			sourceTree = "<group>";
 		};
-		A87AE5BCC520527339595752 /* DailyToDoCheckListWidget */ = {
+		A87AE5BCC520527339595752 /* BurnListWidget */ = {
 			isa = PBXGroup;
 			children = (
-				5E710B2BDB94877682C96971 /* DailyToDoCheckListWidget.swift */,
+				5E710B2BDB94877682C96971 /* BurnListWidget.swift */,
 				F792C88A6F09BDA0B568E849 /* ToggleTaskIntent.swift */,
 				00E8280F09CA01E669F23953 /* Info.plist */,
-				B692E1FC2119A11E63478D3E /* DailyToDoCheckListWidget.entitlements */,
+				B692E1FC2119A11E63478D3E /* BurnListWidget.entitlements */,
 			);
-			name = DailyToDoCheckListWidget;
-			path = DailyToDoCheckListWidget;
+			path = BurnListWidget;
 			sourceTree = "<group>";
 		};
 		CC7562BC50C425F8F41D2AEC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E8597BDEB44B218259007F49 /* DailyToDoCheckList.app */,
-				C274F1E015E7D882CAB5071A /* DailyToDoCheckListWidget.appex */,
-				2ADB495232BB113AAD307968 /* DailyToDoCheckListTests.xctest */,
+				E8597BDEB44B218259007F49 /* BurnList.app */,
+				C274F1E015E7D882CAB5071A /* BurnListWidget.appex */,
+				2ADB495232BB113AAD307968 /* BurnListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F4206ACF856AB5088FCF0DCB /* DailyToDoCheckListTests */ = {
+		F4206ACF856AB5088FCF0DCB /* BurnListTests */ = {
 			isa = PBXGroup;
 			children = (
 				0FA46A078300E50D30F352C4 /* TaskSheetParserTests.swift */,
 				C74C4295C8D46904E2C15E0E /* ChecklistStoreTests.swift */,
 			);
-			name = DailyToDoCheckListTests;
-			path = DailyToDoCheckListTests;
+			path = BurnListTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D7D4CFB3CA6CDC328F4013D /* DailyToDoCheckListTests */ = {
+		1D7D4CFB3CA6CDC328F4013D /* BurnListTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 80899E339108EFEC6009F3A8 /* Build configuration list for PBXNativeTarget "DailyToDoCheckListTests" */;
+			buildConfigurationList = 80899E339108EFEC6009F3A8 /* Build configuration list for PBXNativeTarget "BurnListTests" */;
 			buildPhases = (
 				2D4A565AEF6F7785E2DACDC8 /* Sources */,
 				EAE923FAFF56F9B23FE314B2 /* Frameworks */,
@@ -231,14 +234,14 @@
 			dependencies = (
 				7D32BA166AC79EB694232FC7 /* PBXTargetDependency */,
 			);
-			name = DailyToDoCheckListTests;
-			productName = DailyToDoCheckListTests;
-			productReference = 2ADB495232BB113AAD307968 /* DailyToDoCheckListTests.xctest */;
+			name = BurnListTests;
+			productName = BurnListTests;
+			productReference = 2ADB495232BB113AAD307968 /* BurnListTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		98FFBA6D676897096D141321 /* DailyToDoCheckListWidget */ = {
+		98FFBA6D676897096D141321 /* BurnListWidget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 653C0FEE9559E61881FBA517 /* Build configuration list for PBXNativeTarget "DailyToDoCheckListWidget" */;
+			buildConfigurationList = 653C0FEE9559E61881FBA517 /* Build configuration list for PBXNativeTarget "BurnListWidget" */;
 			buildPhases = (
 				54245CE935CE9B385148B676 /* Sources */,
 				D9E1D2AB14846DFDA95FCAD9 /* Frameworks */,
@@ -248,28 +251,28 @@
 			);
 			dependencies = (
 			);
-			name = DailyToDoCheckListWidget;
-			productName = DailyToDoCheckListWidget;
-			productReference = C274F1E015E7D882CAB5071A /* DailyToDoCheckListWidget.appex */;
+			name = BurnListWidget;
+			productName = BurnListWidget;
+			productReference = C274F1E015E7D882CAB5071A /* BurnListWidget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		E7FD8491E59F3C539B0B316C /* DailyToDoCheckList */ = {
+		E7FD8491E59F3C539B0B316C /* BurnList */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28090801BDD68718DA02279E /* Build configuration list for PBXNativeTarget "DailyToDoCheckList" */;
+			buildConfigurationList = 28090801BDD68718DA02279E /* Build configuration list for PBXNativeTarget "BurnList" */;
 			buildPhases = (
 				A2FA4F9F4AAA84184CC29F42 /* Sources */,
 				819EB31B063F35952BE10788 /* Frameworks */,
 				0C1F2116A9890AE19DA019A8 /* Resources */,
-				4CFD3ADD6253244E8D41F765 /* Embed App Extensions */,
+				4CFD3ADD6253244E8D41F765 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				CEAC5FE7808CA02E54A52BED /* PBXTargetDependency */,
 			);
-			name = DailyToDoCheckList;
-			productName = DailyToDoCheckList;
-			productReference = E8597BDEB44B218259007F49 /* DailyToDoCheckList.app */;
+			name = BurnList;
+			productName = BurnList;
+			productReference = E8597BDEB44B218259007F49 /* BurnList.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -280,9 +283,9 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 2600;
+				LastUpgradeCheck = 2610;
 			};
-			buildConfigurationList = 73FD0CCE5EF514EBD17E1DE7 /* Build configuration list for PBXProject "DailyToDoCheckList" */;
+			buildConfigurationList = 73FD0CCE5EF514EBD17E1DE7 /* Build configuration list for PBXProject "BurnList" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -291,15 +294,13 @@
 				Base,
 			);
 			mainGroup = 22CF088E9642B99AE79FEC3B;
-			minimizedProjectReferenceProxies = 0;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = CC7562BC50C425F8F41D2AEC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E7FD8491E59F3C539B0B316C /* DailyToDoCheckList */,
-				98FFBA6D676897096D141321 /* DailyToDoCheckListWidget */,
-				1D7D4CFB3CA6CDC328F4013D /* DailyToDoCheckListTests */,
+				E7FD8491E59F3C539B0B316C /* BurnList */,
+				98FFBA6D676897096D141321 /* BurnListWidget */,
+				1D7D4CFB3CA6CDC328F4013D /* BurnListTests */,
 			);
 		};
 /* End PBXProject section */
@@ -342,13 +343,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13EACB06F2F5329B01AAAB64 /* DailyToDoCheckListWidget.swift in Sources */,
+				13EACB06F2F5329B01AAAB64 /* BurnListWidget.swift in Sources */,
 				9C21F59E9735533FAC13FAF6 /* ToggleTaskIntent.swift in Sources */,
 				61A5CAA8E77BD18ECF41D688 /* DailyTask.swift in Sources */,
 				29767FA241E8D9481C3FB061 /* DailyChecklistSnapshot.swift in Sources */,
 				1E39E008AB39792E7463B80F /* AppConfiguration.swift in Sources */,
 				8B903152F56AED111CF42358 /* ChecklistStore.swift in Sources */,
 				932E15A1095C8552CBB5BE69 /* AppConstants.swift in Sources */,
+				AA11BB22CC33DD44EE55FF67 /* CyberpunkTheme.swift in Sources */,
 				FB378A5C6215A36A4BC4B4DE /* DateFormatting.swift in Sources */,
 				56D46D52B123A615B968C720 /* TaskSheetParser.swift in Sources */,
 			);
@@ -358,17 +360,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09AB84495018F40B16788BB7 /* DailyToDoCheckListApp.swift in Sources */,
+				09AB84495018F40B16788BB7 /* BurnListApp.swift in Sources */,
 				64CDD20564A5628ED3386F05 /* AppModel.swift in Sources */,
 				6977985842675DDF5C79AE9B /* ReminderScheduler.swift in Sources */,
 				4792FEABD863F0B6F2CB2C83 /* TaskSyncService.swift in Sources */,
 				4EEF1C2E286794F3DF8B5913 /* ChecklistHomeView.swift in Sources */,
+				BB11CC22DD33EE44FF556677 /* BurnEffect.swift in Sources */,
 				4563083663BA0423763E630E /* SettingsView.swift in Sources */,
 				05426E33A07FD0D379E12EFE /* DailyTask.swift in Sources */,
 				B221D24681B75D5BAEC7FEF6 /* DailyChecklistSnapshot.swift in Sources */,
 				7E9BF758533CDE13539D5099 /* AppConfiguration.swift in Sources */,
 				D68CE17DAE182D4FA9BAE8FE /* ChecklistStore.swift in Sources */,
 				0DC5BC78204A305C74D91B7F /* AppConstants.swift in Sources */,
+				AA11BB22CC33DD44EE55FF66 /* CyberpunkTheme.swift in Sources */,
 				4F1760111B3CE3B6E8EB45FF /* DateFormatting.swift in Sources */,
 				73EE2934BB375B6D7936D9E7 /* TaskSheetParser.swift in Sources */,
 			);
@@ -379,14 +383,14 @@
 /* Begin PBXTargetDependency section */
 		7D32BA166AC79EB694232FC7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = DailyToDoCheckList;
-			target = E7FD8491E59F3C539B0B316C /* DailyToDoCheckList */;
+			name = BurnList;
+			target = E7FD8491E59F3C539B0B316C /* BurnList */;
 			targetProxy = 7F6E27017625195A1A69DC1A /* PBXContainerItemProxy */;
 		};
 		CEAC5FE7808CA02E54A52BED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = DailyToDoCheckListWidget;
-			target = 98FFBA6D676897096D141321 /* DailyToDoCheckListWidget */;
+			name = BurnListWidget;
+			target = 98FFBA6D676897096D141321 /* BurnListWidget */;
 			targetProxy = EEF212AB97526E755EB4D5D3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -399,15 +403,16 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGNING_ALLOWED = NO;
+				DEVELOPMENT_TEAM = PAB43497F7;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.DailyToDoCheckListTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.BurnListTests;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyToDoCheckList.app/DailyToDoCheckList";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BurnList.app/BurnList";
 			};
 			name = Debug;
 		};
@@ -418,15 +423,16 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGNING_ALLOWED = NO;
+				DEVELOPMENT_TEAM = PAB43497F7;
 				ENABLE_TESTABILITY = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.DailyToDoCheckListTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.BurnListTests;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyToDoCheckList.app/DailyToDoCheckList";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BurnList.app/BurnList";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -437,14 +443,15 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CODE_SIGN_ENTITLEMENTS = DailyToDoCheckListWidget/DailyToDoCheckListWidget.entitlements;
+				CODE_SIGN_ENTITLEMENTS = BurnListWidget/BurnListWidget.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PAB43497F7;
 				ENABLE_TESTABILITY = NO;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = DailyToDoCheckListWidget/Info.plist;
+				INFOPLIST_FILE = BurnListWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.DailyToDoCheckList.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.BurnList.widget;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -488,9 +495,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -509,6 +518,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -521,14 +531,15 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CODE_SIGN_ENTITLEMENTS = DailyToDoCheckListWidget/DailyToDoCheckListWidget.entitlements;
+				CODE_SIGN_ENTITLEMENTS = BurnListWidget/BurnListWidget.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PAB43497F7;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = DailyToDoCheckListWidget/Info.plist;
+				INFOPLIST_FILE = BurnListWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.DailyToDoCheckList.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.BurnList.widget;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -544,15 +555,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CODE_SIGN_ENTITLEMENTS = DailyToDoCheckList/Resources/DailyToDoCheckList.entitlements;
+				CODE_SIGN_ENTITLEMENTS = BurnList/Resources/BurnList.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PAB43497F7;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = DailyToDoCheckList/Resources/Info.plist;
+				INFOPLIST_FILE = BurnList/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.DailyToDoCheckList;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.BurnList;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 6.0;
@@ -567,15 +582,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CODE_SIGN_ENTITLEMENTS = DailyToDoCheckList/Resources/DailyToDoCheckList.entitlements;
+				CODE_SIGN_ENTITLEMENTS = BurnList/Resources/BurnList.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PAB43497F7;
 				ENABLE_TESTABILITY = NO;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = DailyToDoCheckList/Resources/Info.plist;
+				INFOPLIST_FILE = BurnList/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.DailyToDoCheckList;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.BurnList;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 6.0;
@@ -618,9 +637,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -632,6 +653,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
@@ -641,7 +663,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		28090801BDD68718DA02279E /* Build configuration list for PBXNativeTarget "DailyToDoCheckList" */ = {
+		28090801BDD68718DA02279E /* Build configuration list for PBXNativeTarget "BurnList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F52D236C176F1E9FCE43B6EE /* Release */,
@@ -650,7 +672,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		653C0FEE9559E61881FBA517 /* Build configuration list for PBXNativeTarget "DailyToDoCheckListWidget" */ = {
+		653C0FEE9559E61881FBA517 /* Build configuration list for PBXNativeTarget "BurnListWidget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A62E099D27592DFFC4EE353 /* Release */,
@@ -659,7 +681,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		73FD0CCE5EF514EBD17E1DE7 /* Build configuration list for PBXProject "DailyToDoCheckList" */ = {
+		73FD0CCE5EF514EBD17E1DE7 /* Build configuration list for PBXProject "BurnList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7FB0389CDA27B3353824D701 /* Debug */,
@@ -668,7 +690,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		80899E339108EFEC6009F3A8 /* Build configuration list for PBXNativeTarget "DailyToDoCheckListTests" */ = {
+		80899E339108EFEC6009F3A8 /* Build configuration list for PBXNativeTarget "BurnListTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2012830FC4CEDD69F6227F48 /* Release */,

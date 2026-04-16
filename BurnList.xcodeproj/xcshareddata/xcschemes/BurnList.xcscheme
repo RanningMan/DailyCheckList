@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1600"
+   LastUpgradeVersion = "2610"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E7FD8491E59F3C539B0B316C"
-               BuildableName = "DailyToDoCheckList.app"
-               BlueprintName = "DailyToDoCheckList"
-               ReferencedContainer = "container:DailyToDoCheckList.xcodeproj">
+               BuildableName = "BurnList.app"
+               BlueprintName = "BurnList"
+               ReferencedContainer = "container:BurnList.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "98FFBA6D676897096D141321"
-               BuildableName = "DailyToDoCheckListWidget.appex"
-               BlueprintName = "DailyToDoCheckListWidget"
-               ReferencedContainer = "container:DailyToDoCheckList.xcodeproj">
+               BuildableName = "BurnListWidget.appex"
+               BlueprintName = "BurnListWidget"
+               ReferencedContainer = "container:BurnList.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7FD8491E59F3C539B0B316C"
-            BuildableName = "DailyToDoCheckList.app"
-            BlueprintName = "DailyToDoCheckList"
-            ReferencedContainer = "container:DailyToDoCheckList.xcodeproj">
+            BuildableName = "BurnList.app"
+            BlueprintName = "BurnList"
+            ReferencedContainer = "container:BurnList.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -56,9 +56,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1D7D4CFB3CA6CDC328F4013D"
-               BuildableName = "DailyToDoCheckListTests.xctest"
-               BlueprintName = "DailyToDoCheckListTests"
-               ReferencedContainer = "container:DailyToDoCheckList.xcodeproj">
+               BuildableName = "BurnListTests.xctest"
+               BlueprintName = "BurnListTests"
+               ReferencedContainer = "container:BurnList.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -78,9 +78,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7FD8491E59F3C539B0B316C"
-            BuildableName = "DailyToDoCheckList.app"
-            BlueprintName = "DailyToDoCheckList"
-            ReferencedContainer = "container:DailyToDoCheckList.xcodeproj">
+            BuildableName = "BurnList.app"
+            BlueprintName = "BurnList"
+            ReferencedContainer = "container:BurnList.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7FD8491E59F3C539B0B316C"
-            BuildableName = "DailyToDoCheckList.app"
-            BlueprintName = "DailyToDoCheckList"
-            ReferencedContainer = "container:DailyToDoCheckList.xcodeproj">
+            BuildableName = "BurnList.app"
+            BlueprintName = "BurnList"
+            ReferencedContainer = "container:BurnList.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xcrun simctl:*)",
+      "Bash(curl -sL 'https://docs.google.com/spreadsheets/d/1Xropn07u4gNZXp9k3mgLYH9fUGroLLMCkX1l3FJ9XrA/export?format=csv')",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(xcodebuild -project DailyToDoCheckList.xcodeproj -scheme DailyToDoCheckList -configuration Debug build)",
+      "Bash(xcodebuild -project DailyToDoCheckList.xcodeproj -scheme DailyToDoCheckList -destination 'platform=iOS Simulator,name=iPhone 16' -configuration Debug build)",
+      "Bash(xcodebuild -project DailyToDoCheckList.xcodeproj -scheme DailyToDoCheckList -destination 'platform=iOS Simulator,name=iPhone 16' test)",
+      "Bash(xcodebuild -project DailyToDoCheckList.xcodeproj -scheme DailyToDoCheckList -destination 'platform=iOS Simulator,name=iPhone 16' build)"
+    ]
+  }
+}

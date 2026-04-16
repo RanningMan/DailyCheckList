@@ -4,6 +4,7 @@ import WidgetKit
 @MainActor
 final class AppModel: ObservableObject {
     @Published private(set) var tasks: [DailyTask] = []
+    @Published private(set) var historyEntries: [(dateID: String, tasks: [DailyTask])] = []
     @Published private(set) var syncStatusText = "Add your published Google Sheet URL in Settings."
     @Published private(set) var isRefreshing = false
     @Published var configuration: AppConfiguration
@@ -22,6 +23,15 @@ final class AppModel: ObservableObject {
         self.reminderScheduler = reminderScheduler
         configuration = store.loadConfiguration()
         reloadFromStore()
+    }
+
+    var activeTheme: AppTheme {
+        configuration.themeID.theme
+    }
+
+    func setTheme(_ themeID: AppThemeID) {
+        configuration.themeID = themeID
+        store.saveConfiguration(configuration)
     }
 
     var reminderDate: Date {
@@ -78,11 +88,13 @@ final class AppModel: ObservableObject {
 
     private func reloadFromStore(dateID: String) {
         tasks = store.loadTasks(for: dateID)
+        historyEntries = store.loadHistoryEntries().filter { $0.dateID < dateID }
         syncStatusText = statusText(for: store.loadSnapshot(), currentDateID: dateID)
     }
 
     private func apply(snapshot: DailyChecklistSnapshot) {
         tasks = store.loadTasks(for: snapshot.dateID)
+        historyEntries = store.loadHistoryEntries().filter { $0.dateID < snapshot.dateID }
         syncStatusText = statusText(for: snapshot, currentDateID: snapshot.dateID)
     }
 

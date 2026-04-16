@@ -93,15 +93,64 @@ final class ChecklistStore {
         userDefaults.set(data, forKey: AppConstants.completionMapKey)
     }
 
+    // MARK: - History
+
+    func saveHistory(_ history: [String: [DailyTask]]) {
+        guard let data = try? encoder.encode(history) else { return }
+        userDefaults.set(data, forKey: AppConstants.historyKey)
+    }
+
+    func loadHistory() -> [String: [DailyTask]] {
+        guard
+            let data = userDefaults.data(forKey: AppConstants.historyKey),
+            let history = try? decoder.decode([String: [DailyTask]].self, from: data)
+        else {
+            return [:]
+        }
+        return history
+    }
+
+    func mergeHistory(_ newEntries: [String: [DailyTask]]) {
+        var history = loadHistory()
+        for (dateID, tasks) in newEntries {
+            history[dateID] = tasks
+        }
+        saveHistory(history)
+    }
+
+    func loadHistoryEntries() -> [(dateID: String, tasks: [DailyTask])] {
+        let history = loadHistory()
+        let completionMap = loadCompletionMap()
+
+        return history.map { dateID, tasks in
+            let merged = tasks.map { task -> DailyTask in
+                var updated = task
+                updated.isCompleted = completionMap[completionKey(for: task.taskID, dateID: dateID)] ?? false
+                return updated
+            }.sorted { $0.sortOrder < $1.sortOrder }
+            return (dateID: dateID, tasks: merged)
+        }.sorted { $0.dateID > $1.dateID }
+    }
+
+    // MARK: - Private
+
     private func clearStaleCompletionData(keeping dateID: String) {
+        let historyDateIDs = Set(loadHistory().keys)
         var completionMap = loadCompletionMap()
-        clearStaleCompletionData(in: &completionMap, keeping: dateID)
+        clearStaleCompletionData(in: &completionMap, keeping: dateID, historyDateIDs: historyDateIDs)
         saveCompletionMap(completionMap)
     }
 
     private func clearStaleCompletionData(in completionMap: inout [String: Bool], keeping dateID: String) {
+        let historyDateIDs = Set(loadHistory().keys)
+        clearStaleCompletionData(in: &completionMap, keeping: dateID, historyDateIDs: historyDateIDs)
+    }
+
+    private func clearStaleCompletionData(in completionMap: inout [String: Bool], keeping dateID: String, historyDateIDs: Set<String>) {
         completionMap = completionMap.filter { key, _ in
-            key.hasPrefix("\(dateID)|")
+            guard let separatorIndex = key.firstIndex(of: "|") else { return false }
+            let keyDateID = String(key[key.startIndex..<separatorIndex])
+            return keyDateID == dateID || historyDateIDs.contains(keyDateID)
         }
     }
 
